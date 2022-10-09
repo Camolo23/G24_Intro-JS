@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="./assets/css/main.css">
+
+    <title>MiTienda</title>
+</head>
+<body>
+    <div class="card">
+        <img src="https://placedog.net/500/500" alt="">
+        <p class="card-tittle">Producto en venta</p>
+        <input id="q-input" placeholder="Cantidad" type="text">
+        <input id="color-input" placeholder="Color" type="text">
+        <p class="product-price">Precio: $400000</p>
+        <button id="btn-1" onclick="
+            qInput = document.querySelector('#q-input')
+            colorInput = document.querySelector('#color-input')
+
+            finalPrice = document.querySelector('#final-price')
+            finalPrice.innerHTML = qInput.value * 400000
+
+            finalQ = document.querySelector('#final-q')
+            finalQ.innerHTML = qInput.value
+
+            finalColor = document.querySelector('.final-color')
+            finalColor.style.backgroundColor = colorInput.value
+
+        ">Calcular Total</button>
+    </div>
+
+    <div class="summary">
+        <p>Total: $<span id="final-price">0</span></p>
+        <p>Cantidad: <span id="final-q">0</span></p>
+        <div class="color-content">
+            Color: 
+            <div class="final-color"></div>
+        </div>
+    </div>
+</body>
+</html>
